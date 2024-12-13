@@ -30,4 +30,4 @@ EXPOSE ${SERVER_PORT}
 
 ENTRYPOINT java -jar buildtoo-final.jar
 
-HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD curl -s -f http:/localhost:8080/demo/health || exit 1
+HEALTHCHECK --interval=60s --timeout=30s --start-period=120s  CMD curl -s -f http:/localhost:8080/demo/health || exit 1
